@@ -1,0 +1,908 @@
+/* Global Styles */
+:root {
+  --primary-color: #6a43b5;
+  --secondary-color: #8065c9;
+  --accent-color: #ffb700;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+  --warning-color: #f0ad4e;
+  --info-color: #5bc0de;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s ease-in;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+}
+
+/* Alerts */
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: var(--error-color);
+  color: #fff;
+}
+
+/* Dashboard */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+/* Training Exercises */
+.exercise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.exercise-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.exercise-image {
+  height: 180px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.exercise-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.exercise-content {
+  padding: 1.5rem;
+}
+
+.exercise-title {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.exercise-description {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.exercise-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.difficulty {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.difficulty-easy {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.difficulty-medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-hard {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Game Specific Styles */
+.game-image-container {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game-image {
+  display: block;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.images-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.images-container .game-image-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hidden-objects-game .object-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: #f8f8f8;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.hidden-objects-game .object-item {
+  padding: 0.25rem 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.hidden-objects-game .object-item.found {
+  background: #d4edda;
+  color: #155724;
+  text-decoration: line-through;
+}
+
+.difference-counter {
+  background: #f8f8f8;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Object Tracking Game Styles */
+.object-tracking-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-status {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: #f8f8f8;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.round-info, .phase-info {
+  font-weight: bold;
+}
+
+.object-tracking-canvas-container {
+  width: 600px;
+  height: 400px;
+  margin: 1rem 0;
+  border: 2px solid #6a43b5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-canvas {
+  display: block;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.phase-message {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #6a43b5;
+  border-radius: 0 4px 4px 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+.phase-message h3 {
+  color: #6a43b5;
+  margin-bottom: 0.5rem;
+}
+
+.phase-message p {
+  margin-bottom: 0.5rem;
+}
+
+.phase-message button {
+  margin-top: 1rem;
+}
+
+.score-info {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6a43b5;
+}
+
+@media (max-width: 650px) {
+  .object-tracking-canvas-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .tracking-canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Progress */
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+}
+
+.progress-charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .progress-charts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 执行功能训练 - 拖拽样式 */
+.task-list-container {
+  margin-bottom: 2rem;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.task-item {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.task-item.drag-over {
+  border: 2px dashed var(--primary-color);
+  background-color: rgba(106, 67, 181, 0.05);
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.task-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.task-priority {
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.priority-high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.priority-medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority-low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.time-slots {
+  margin-bottom: 2rem;
+}
+
+.slot-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.time-slot {
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.planning-submit {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 选项样式 */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.option.selected {
+  background-color: rgba(106, 67, 181, 0.1);
+  border-color: var(--primary-color);
+}
+
+.option-letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.option-text {
+  flex: 1;
+}
+
+/* 提示样式 */
+.hint-section {
+  margin-top: 1rem;
+}
+
+.hint-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.hint-content {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 0 4px 4px 0;
+  color: #856404;
+}
+
+/* 导航按钮 */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* 游戏容器样式 */
+.game-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.game-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.game-header h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.game-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timer, .progress {
+  font-weight: bold;
+  color: #666;
+}
+
+/* 阅读训练样式 */
+.reading-game {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.reading-passage {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.passage-content {
+  line-height: 1.8;
+  color: #333;
+}
+
+.reading-question, .vocabulary-question, .proverb-question {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.proverb-display {
+  background-color: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.proverb {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+@media (min-width: 992px) {
+  .reading-game {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 结果样式 */
+.results-container {
+  text-align: center;
+}
+
+.results-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.result-label {
+  font-weight: bold;
+  color: #666;
+}
+
+.result-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.training-tips {
+  margin-top: 2rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.training-tips h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.training-tips ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.training-tips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* 数独游戏样式 */
+.sudoku-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1px;
+  background-color: #666;
+  border: 2px solid #333;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+}
+
+.sudoku-row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1px;
+}
+
+.sudoku-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* 3x3块边框加粗 */
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid #333;
+}
+
+.sudoku-cell:nth-child(1) {
+  border-left: 2px solid #333;
+}
+
+.sudoku-row:nth-child(3n) {
+  border-bottom: 2px solid #333;
+}
+
+.sudoku-row:nth-child(1) {
+  border-top: 2px solid #333;
+}
+
+.sudoku-cell.fixed {
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.sudoku-cell.editable {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.sudoku-cell.editable:hover {
+  background-color: #f0f4ff;
+}
+
+.sudoku-cell.selected {
+  background-color: rgba(106, 67, 181, 0.2);
+}
+
+.sudoku-cell.error {
+  color: #d9534f;
+}
+
+.sudoku-cell.highlight {
+  background-color: rgba(255, 183, 0, 0.1);
+}
+
+.number-controls {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+.number-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.number-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.number-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.game-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+  .sudoku-cell {
+    font-size: 1rem;
+  }
+  
+  .number-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+} 
